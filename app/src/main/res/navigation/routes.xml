@@ -1,0 +1,23 @@
+<!-- res/navigation/nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/screen1">
+
+    <fragment
+        android:id="@+id/screen1"
+        android:name="com.example.Screen1"
+        tools:layout="@layout/screen1_layout">
+        <action
+            android:id="@+id/action_screen1_to_screen2"
+            app:destination="@id/screen2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen2"
+        android:name="com.example.Screen2"
+        tools:layout="@layout/screen2_layout">
+        <!-- Definiere hier weitere Aktionen oder Übergänge -->
+    </fragment>
+
+</navigation>
