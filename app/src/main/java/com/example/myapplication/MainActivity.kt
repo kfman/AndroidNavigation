@@ -79,6 +79,10 @@ class MainActivity : ComponentActivity() {
                             },
                         )
                     },
+                    bottomBar = {
+                    Text(text="Navigate here...")
+
+                    }
                 ) { ip ->
                     Navigation(
                         navController,
@@ -124,6 +128,7 @@ fun Screen1(navController: NavController) {
         }
     }
 }
+
 
 @Composable
 fun Screen2(
