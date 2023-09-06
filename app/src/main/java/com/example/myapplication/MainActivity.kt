@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -80,8 +81,14 @@ class MainActivity : ComponentActivity() {
                         )
                     },
                     bottomBar = {
-                    Text(text="Navigate here...")
-
+                        Row {
+                            Button(onClick = { navController.navigate("home") }) {
+                                Text(text = "home")
+                            }
+                            Button(onClick = { navController.navigate("about/0") }) {
+                                Text(text = "About")
+                            }
+                        }
                     }
                 ) { ip ->
                     Navigation(
